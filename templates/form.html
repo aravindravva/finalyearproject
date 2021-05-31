@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/predict/{{id}}" method="POST">
+        
+        rural population<input type="text"  name="rpop"> 
+        urban population<input type="text"  name="upop"> 
+        literacy rate <input type="text" name="litr">
+        sex ratio<input type="text" name="sext">
+        SC%<input type="text"  name="scp">
+        ST%<input type="text"  name="stp">
+        marginal workers<input type="text"  name="marg">
+        main workers<input type="text"name="main">
+        population density<input type="text" name="popd">
+        police density(area wise)<input type="text" name="polda">
+        police density(pop wise)<input type="text" name="poldp"> 
+         
+        <button type="submit">predict</button>
+
+    </form>
+</body>
+</html>
