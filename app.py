@@ -11,13 +11,17 @@ app = Flask(__name__)
 def hello_world():
     return render_template("home.html")
 
-@app.route("/algolist")
-def show_list():
-    return render_template("algolist.html")
+@app.route("/algolist/<crime>")
+def show_list(crime):
+    return render_template("algolist.html",id=crime)
 
 @app.route("/showform/<number>")
 def show_form(number):
     return render_template("form.html",id=number)
+
+@app.route("/analytics")
+def show():
+    return render_template("karnataka.html")
 
 @app.route("/predict/<id>",methods=["POST"])
 def predict(id):
@@ -36,28 +40,30 @@ def predict(id):
         d["marg"]=(d["marg"]-7.24)/(22.4-7.24)
         d["main"]=(d["main"]-77.6)/(92.76-77.6)
         print(d)
-        modelfile = 'models/prediction.pickle' 
+        modelfile = 'models/rape/MLRpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=float(prediction)*30+2
         return jsonify(prediction)
     
     if(id=="11"):
-        modelfile = 'models/svmprediction.pickle' 
+        modelfile = 'models/rape/MLRpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T)[0]
         return jsonify(prediction)
+    
     if(id=="12"):
         remove=["sext","polda","poldp","scp","popd"]
         for k in remove:
             d.pop(k,None)
-        modelfile = 'models/GLMprediction.pickle' 
+        modelfile = 'models/rape/GLMpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         return jsonify(prediction)
-        
+    
+    
 
-    #print(d)
+    
     
 if __name__ == '__main__': 
     app.run(debug=True) 

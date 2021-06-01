@@ -10,21 +10,68 @@
     <title>Document</title>
 </head>
 <body>
-     <button>
-         <a href="/showform/10">
-                MLR for rape
-         </a>
-        </button>
-        <button>
-         <a href="/showform/11">
-                PCA for rape    
-        </a>
-     </button>
-     <button>
-        <a href="/showform/12">
-               GLM for rape    
+    {% if id=="rape" %}
+            {% block rape %}
+
+                        <button>
+                            <a href="/showform/10">
+                                    MLR for rape
+                            </a>
+                            </button>
+                            <button>
+                            <a href="/showform/11">
+                                    PCA for rape    
+                            </a>
+                        </button>
+                        <button>
+                            <a href="/showform/12">
+                                GLM for rape    
+                        </a>
+                        </button>
+            {% endblock rape %}
+    {% elif id=="murder" %}
+            {% block murder %}
+                        <button>
+                            <a href="/showform/20">
+                                    MLR for murder
+                            </a>
+                            </button>
+                            <button>
+                            <a href="/showform/21">
+                                    PCA for murder    
+                            </a>
+                        </button>
+                        <button>
+                            <a href="/showform/22">
+                                GLM for murder    
+                        </a>
+                        </button>
+            {% endblock murder %}
+    {% else %}
+            {% block robbery %}
+                        <button>
+                            <a href="/showform/30">
+                                    MLR for robbery
+                            </a>
+                            </button>
+                            <button>
+                            <a href="/showform/21">
+                                    PCA for robbery   
+                            </a>
+                        </button>
+                        <button>
+                            <a href="/showform/22">
+                                GLM for robbery    
+                        </a>
+                        </button>
+            {% endblock robbery %}
+
+    {% endif %}
+    <button>
+        <a href="/analytics">
+               analytics    
        </a>
     </button>
-    
+
 </body>
 </html>
