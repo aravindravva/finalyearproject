@@ -27,7 +27,6 @@ def show():
 def predict(id):
     d=request.form.to_dict()
     for i in d:
-        print(i)
         d[i]=float(d[i])
 
     if(id=="10"):
@@ -43,25 +42,86 @@ def predict(id):
         modelfile = 'models/rape/MLRpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
-        prediction=float(prediction)*30+2
+        prediction=float(prediction)*30+2 #scaling 
+        prediction=round(prediction,2)
         return jsonify(prediction)
     
     if(id=="11"):
-        modelfile = 'models/rape/MLRpredictionrape.pickle' 
+        modelfile = 'models/rape/forestpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T)[0]
+        prediction=round(float(prediction),2)
         return jsonify(prediction)
     
     if(id=="12"):
-        remove=["sext","polda","poldp","scp","popd"]
+        remove=["sext","polda","poldp"]
         for k in remove:
             d.pop(k,None)
         modelfile = 'models/rape/GLMpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
+        prediction=round(float(prediction),2)
         return jsonify(prediction)
     
+    if(id=="20"):
+        remove=["marg","main","polda","poldp","scp","litr"]
+        for k in remove:
+            d.pop(k,None)
+        modelfile = 'models/murder/MLRpredictionmurder.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
+
+    if(id=="21"):
+        modelfile = 'models/murder/forestpredictionmurder.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T)[0]
+        prediction=prediction/1.05
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
     
+    if(id=="22"):
+        remove=["poldp","marg","main","litr","polda"]
+        for k in remove:
+            d.pop(k,None)
+        modelfile = 'models/murder/GLMmurderprediction.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
+    
+    if(id=="30"):
+        remove=["marg","sext","poldp","litr","popd"]
+        for k in remove:
+            d.pop(k,None)
+        modelfile = 'models/robbery/MLRpredictionmurder.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
+    
+    if(id=="31"):
+        modelfile = 'models/robbery/forestpredictionrobbery.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T)[0]
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
+
+    
+    if(id=="32"):
+        remove=["sext","marg","polda"]
+        for k in remove:
+            d.pop(k,None)
+        modelfile = 'models/robbery/GLMpredictionrobbery.pickle' 
+        model = p.load(open(modelfile, 'rb')) 
+        prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
+        prediction=round(float(prediction),2)
+        return jsonify(prediction)
+
+
+    	
+        
 
     
     
