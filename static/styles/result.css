@@ -1,0 +1,41 @@
+.result {
+  margin: 0 auto;
+  margin-top: 200px;
+  cursor: pointer;
+  width: 35vw;
+  height: 28vh;
+  background-color: #9b3d28;
+  border-radius: 6px;
+}
+
+.result p {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+}
+
+.result-background {
+  background-color: #6b2515;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 12px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.result-background p {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+}
+/*# sourceMappingURL=result.css.map */

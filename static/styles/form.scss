@@ -1,0 +1,139 @@
+.button-type-one-form {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  min-width: 20vw !important;
+  min-height: 10vh !important;
+  // max-width: max-content !important;
+  max-width: 35vw;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+
+  background-color: #9b3d28;
+  border-radius: 6px;
+
+  p {
+    text-decoration: none;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+input[type="text"] {
+  // width: 100px;
+  // -webkit-transition: width .35s ease-in-out;
+  // transition: width .35s ease-in-out;
+  margin-left: 10px;
+  border: none !important;
+  border-radius: 4px;
+  height: 40px;
+  max-width: 156.8px !important;
+  // min-width: 156.8px !important;
+  background: #6b2515 !important;
+  color: inherit;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+  outline: inherit;
+
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+.button-parent {
+ // border: dotted red;
+  //margin: 220px auto;
+  width: 98vw;
+  height: max-content;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+
+  ul li {
+    float: left;
+    width: 50%; //helps to determine number of columns, for instance 33.3% displays 3 columns
+  }
+  ul {
+    margin-top: 20px;
+    margin-left: 150px;
+    list-style-type: disc;
+    list-style: none;
+  }
+
+  li {
+    padding-bottom: 20px;
+  }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px #6b2515 inset !important;
+}
+
+input:-webkit-autofill
+{
+ -webkit-text-fill-color: white !important;
+}
+
+
+.submit{
+    margin: 0 auto;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  
+    width: 10vw;
+    height: 8vh;
+    background-color: #9b3d28;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+   
+}
+
+.submit:hover{
+background-color: #6b2515;
+}
+
+.submit-parent{
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.box {
+    margin: 0 auto;
+    //border-radius: 8px;
+    //border: solid red;
+    width: 100vw;
+    height: max-content;
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+  }

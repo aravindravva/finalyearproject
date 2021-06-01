@@ -1,0 +1,85 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  margin: 0 auto;
+  //border-radius: 8px;
+  //border: solid red;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.header {
+  // border: solid green;
+  width: 100%;
+  height: 12vh;
+  background-color: #441f1d;
+//   border-radius: 8px 8px 0px 0px;
+
+  p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 24px;
+  }
+}
+
+.button-parent {
+ // border: dotted red;
+  margin: 220px auto;
+  width: 50vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.button-type-one {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  min-width: 20vw;
+  height: 15vh;
+  background-color: #9b3d28;
+  border-radius: 6px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+.button-type-one:hover{
+    background-color: #6b2515;
+}
+
+.img {
+  width: 99%;
+  height: 99%;
+}
+
+
+
+// ../static/images/PHONE 1.png
