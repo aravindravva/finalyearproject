@@ -35,23 +35,23 @@ def show_form():
     #algorithm== mlr,forest,glm
     #crime== rape murder robbery
     if(crime=="rape" and algorithm=="mlr"):
-        return render_template("form.html",id="11",algo="rape prediction by Multilinear regression")
+        return render_template("form.html",id="11",algo="Predicting Rape - MLR")
     elif(crime=="rape" and algorithm=="forest"):
-        return render_template("form.html",id="12",algo="rape prediction by random forest regressor")
+        return render_template("form.html",id="12",algo="Predicting Rape - RFR")
     elif(crime=="rape" and algorithm=="glm"):
-        return render_template("form.html",id="13",algo="rape prediction by generalised linear model")
+        return render_template("form.html",id="13",algo="Predicting Rape - GLM")
     elif(crime=="murder" and algorithm=="mlr"):
-        return render_template("form.html",id="21",algo="murder prediction by Multilinear regression")
+        return render_template("form.html",id="21",algo="Predicting Murder - MLR")
     elif(crime=="murder" and algorithm=="forest"):
-        return render_template("form.html",id="22",algo="murder prediction by random forest regressor")
+        return render_template("form.html",id="22",algo="Predicting Murder - RFR")
     elif(crime=="murder" and algorithm=="glm"):
-        return render_template("form.html",id="23",algo="murder prediction by generalised linear model")
+        return render_template("form.html",id="23",algo="Predicting Murder - GLM")
     elif(crime=="robbery" and algorithm=="mlr"):
-        return render_template("form.html",id="31",algo="robbery prediction by Multilinear regression")
+        return render_template("form.html",id="31",algo="Predicting Robbery - MLR")
     elif(crime=="robbery" and algorithm=="forest"):
-        return render_template("form.html",id="32",algo="robbery prediction by random forest regressor")
+        return render_template("form.html",id="32",algo="Predicting Robbery - RFR")
     elif(crime=="robbery" and algorithm=="glm"):
-        return render_template("form.html",id="33",algo="robbery prediction by generalised linear model")
+        return render_template("form.html",id="33",algo="Predicting Rape - GLM")
     
 
 
@@ -76,14 +76,14 @@ def predict(id):
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=float(prediction)*30+2 #scaling 
         prediction=round(prediction,2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="rape",algo="Predicting Rape - MLR")
     
     if(id=="12"):
         modelfile = 'models/rape/forestpredictionrape.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T)[0]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="rape",algo="Predicting Rape - RFR")
     
     if(id=="13"):
         remove=["sext","polda","poldp"]
@@ -93,7 +93,7 @@ def predict(id):
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="rape",algo="Predicting Rape - GLM")
     
     if(id=="21"):
         remove=["marg","main","polda","poldp","scp","litr"]
@@ -103,7 +103,7 @@ def predict(id):
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="murder",algo="Predicting Murder - MLR")
 
     if(id=="22"):
         modelfile = 'models/murder/forestpredictionmurder.pickle' 
@@ -111,7 +111,7 @@ def predict(id):
         prediction=model.predict(pd.DataFrame(d.values()).T)[0]
         prediction=prediction/1.05
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="murder",algo="Predicting Murder - RFR")
     
     if(id=="23"):
         remove=["poldp","marg","main","litr","polda"]
@@ -121,7 +121,7 @@ def predict(id):
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",result=prediction,crime="murder",algo="Predicting Murder - GLM")
     
     if(id=="31"):
         remove=["marg","sext","poldp","litr","popd"]
@@ -131,14 +131,14 @@ def predict(id):
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",crime="robbery",result=prediction,algo="Predicting Robbery - MLR")
     
     if(id=="32"):
         modelfile = 'models/robbery/forestpredictionrobbery.pickle' 
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T)[0]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",crime="robbery",result=prediction,algo="Predicting Robbery - RFR")
 
     
     if(id=="33"):
@@ -149,7 +149,7 @@ def predict(id):
         model = p.load(open(modelfile, 'rb')) 
         prediction=model.predict(pd.DataFrame(d.values()).T).to_string().split("    ")[1]
         prediction=round(float(prediction),2)
-        return render_template("result.html",result=prediction)
+        return render_template("result.html",crime="robbery",result=prediction,algo="Predicting Robbery - GLM")
 
 
     	
