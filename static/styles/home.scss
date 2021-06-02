@@ -30,7 +30,8 @@ body {
 
   p {
     color: white;
-    font-family: "Ubuntu", sans-serif;
+    // font-family: "Ubuntu", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
     padding: 24px;
@@ -59,20 +60,21 @@ body {
 
   min-width: 20vw;
   height: 15vh;
-  background-color: #9b3d28;
+  background-color: #7F0000;
   border-radius: 6px;
 
   a {
     text-decoration: none;
     color: white;
-    font-family: "Ubuntu", sans-serif;
+    // font-family: "Ubuntu", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 32px;
     font-weight: 500;
   }
 }
 
 .button-type-one:hover{
-    background-color: #6b2515;
+    background-color: rgb(85, 5, 5);
 }
 
 .img {
@@ -80,6 +82,18 @@ body {
   height: 99%;
 }
 
+.header-one{
+  width: max-content;
+  height: 12vh;
+  //border: dotted red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img{
+    width: 40px;
+    height: 60px;
+  }
+}
 
 
 // ../static/images/PHONE 1.png

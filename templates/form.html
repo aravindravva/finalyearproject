@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel = "icon" href = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Seal_of_Karnataka.svg/1200px-Seal_of_Karnataka.svg.png" 
-    type = "image/x-icon">
-    <link rel="stylesheet" href="../static/styles/visualizations.css" />
-    <link rel="stylesheet" href="../static/styles/home.css" />
-    <link rel="stylesheet" href="../static/styles/form.css" />
 
-    <title>Form</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Seal_of_Karnataka.svg/1200px-Seal_of_Karnataka.svg.png"
+    type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles/visualizations.css" />
+  <link rel="stylesheet" href="../static/styles/home.css" />
+  <link rel="stylesheet" href="../static/styles/form.css" />
 
-  <body>
-    <!-- <h1>{{algo}}</h1>
+  <title>Form</title>
+</head>
+
+<body>
+  <!-- <h1>{{algo}}</h1>
     <form action="/predict/{{id}}" method="POST">
       rural population<input type="text" name="rpop" /> urban population<input
         type="text"
@@ -42,126 +43,132 @@
       <button type="submit">predict</button>
     </form> -->
 
-    <form action="/predict/{{id}}" method="POST">
-      <div class="box">
-        <div class="header">
+  <form action="/predict/{{id}}" method="POST">
+    <div class="box">
+      <div class="header">
+        <div class="header-one">
           <p>{{algo}}</p>
+          <img src="../static/images/map.png" alt="" />
         </div>
-        <a href="/">
-                Home
-               </a><br>
-               <a href="/visualize">
-                Visualize
-               </a><br>
-               <a href="/crimeprediction">
-                Predict
-               </a>
-        <div class="button-parent">
-          <ul>
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  rural population
-                </p>
-                <input type="text" name="rpop" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  urban population
-                </p>
-                <input type="text" name="upop" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  literacy rate
-                </p>
-                <input type="text" name="litr" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  sex ratio
-                </p>
-                <input type="text" name="sext" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  SC%
-                </p>
-                <input type="text" name="scp" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  ST%
-                </p>
-                <input type="text" name="stp" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  marginal workers
-                </p>
-                <input type="text" name="marg" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  main workers
-                </p>
-                <input type="text" name="main" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  population density
-                </p>
-                <input type="text" name="popd" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  police density(area wise)
-                </p>
-                <input type="text" name="polda" />
-              </div>
-            </li>
-
-            <li>
-              <div class="button-type-one-form flex">
-                <p>
-                  police density(pop wise)
-                </p>
-                <input type="text" name="poldp" />
-              </div>
-            </li>
-          </ul>
+        <div class="header-two">
+            <a href="/">
+              Home </a><br />
+            <a href="/visualize">
+              Visualize </a><br />
+            <a href="/crimeprediction">
+              Predict
+            </a>
         </div>
-        <div class="submit-parent">
-          <button class="submit" type="submit">predict</button>
-        </div>
+
       </div>
-    </form>
-  </body>
+  
+      <div class="button-parent">
+        <ul>
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                rural population
+              </p>
+              <input type="text" name="rpop" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                urban population
+              </p>
+              <input type="text" name="upop" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                literacy rate
+              </p>
+              <input type="text" name="litr" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                sex ratio
+              </p>
+              <input type="text" name="sext" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                SC%
+              </p>
+              <input type="text" name="scp" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                ST%
+              </p>
+              <input type="text" name="stp" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                marginal workers
+              </p>
+              <input type="text" name="marg" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                main workers
+              </p>
+              <input type="text" name="main" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                population density
+              </p>
+              <input type="text" name="popd" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                police density(area wise)
+              </p>
+              <input type="text" name="polda" />
+            </div>
+          </li>
+
+          <li>
+            <div class="button-type-one-form flex">
+              <p>
+                police density(pop wise)
+              </p>
+              <input type="text" name="poldp" />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="submit-parent">
+        <button class="submit" type="submit">predict</button>
+      </div>
+    </div>
+  </form>
+</body>
+
 </html>

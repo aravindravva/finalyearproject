@@ -9,7 +9,8 @@
 }
 
 .button-parent {
-  margin: 220px auto;
+  margin: 0 auto;
+  padding-top: 220px;
   width: 60vw;
   height: 20vh;
   display: -webkit-box;

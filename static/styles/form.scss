@@ -10,17 +10,18 @@
   min-width: 20vw !important;
   min-height: 10vh !important;
   // max-width: max-content !important;
-  max-width: 35vw;
+  max-width: 28vw;
   padding-left: 15px !important;
   padding-right: 15px !important;
 
-  background-color: #9b3d28;
+  background-color: #7F0000;
   border-radius: 6px;
 
   p {
     text-decoration: none;
     color: white;
-    font-family: "Ubuntu", sans-serif;
+    // font-family: "Ubuntu", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 32px;
     font-weight: 500;
   }
@@ -34,9 +35,9 @@ input[type="text"] {
   border: none !important;
   border-radius: 4px;
   height: 40px;
-  max-width: 156.8px !important;
+  max-width: 117.8px !important;
   // min-width: 156.8px !important;
-  background: #6b2515 !important;
+  background: rgb(53, 4, 4) !important;
   color: inherit;
   border: none;
   padding: 0;
@@ -45,7 +46,8 @@ input[type="text"] {
   outline: inherit;
 
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  
+  font-family: 'Quicksand', sans-serif;
   font-size: 18px;
 }
 
@@ -63,17 +65,18 @@ input[type="text"] {
 
   ul li {
     float: left;
-    width: 50%; //helps to determine number of columns, for instance 33.3% displays 3 columns
+    width: 33.3%; //helps to determine number of columns, for instance 33.3% displays 3 columns
   }
   ul {
     margin-top: 20px;
-    margin-left: 150px;
+    margin-left: 60px;
     list-style-type: disc;
     list-style: none;
   }
 
   li {
-    padding-bottom: 20px;
+    padding-bottom: 54px;
+    // padding-right: 10px;
   }
 }
 
@@ -83,7 +86,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active
 {
- -webkit-box-shadow: 0 0 0 30px #6b2515 inset !important;
+ -webkit-box-shadow: 0 0 0 30px rgb(53, 4, 4) inset !important;
 }
 
 input:-webkit-autofill
@@ -104,11 +107,12 @@ input:-webkit-autofill
   
     width: 10vw;
     height: 8vh;
-    background-color: #9b3d28;
+    background-color: #441F1D;
     border-radius: 6px;
     text-decoration: none;
     color: white;
-    font-family: "Ubuntu", sans-serif;
+    // font-family: "Ubuntu", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 24px;
     font-weight: 500;
    
@@ -130,7 +134,7 @@ background-color: #6b2515;
     //border-radius: 8px;
     //border: solid red;
     width: 100vw;
-    height: max-content;
+    height: 100vh;
     background-image: url("../images/background.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;

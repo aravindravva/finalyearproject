@@ -4,21 +4,22 @@
   cursor: pointer;
   width: 35vw;
   height: 28vh;
-  background-color: #9b3d28;
+  background-color: #7F0000;
   border-radius: 6px;
+  padding-bottom: 25px;
 }
 
 .result p {
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 500;
   padding: 24px;
   text-align: center;
 }
 
 .result-background {
-  background-color: #6b2515;
+  background-color: #350404;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -32,9 +33,9 @@
 
 .result-background p {
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 500;
   padding: 24px;
   text-align: center;
 }

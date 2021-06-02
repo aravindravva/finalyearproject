@@ -27,7 +27,7 @@ body {
 
 .header p {
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   font-weight: bold;
   padding: 24px;
@@ -59,24 +59,45 @@ body {
   outline: inherit;
   min-width: 20vw;
   height: 15vh;
-  background-color: #9b3d28;
+  background-color: #7F0000;
   border-radius: 6px;
 }
 
 .button-type-one a {
   text-decoration: none;
   color: white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 32px;
   font-weight: 500;
 }
 
 .button-type-one:hover {
-  background-color: #6b2515;
+  background-color: #550505;
 }
 
 .img {
   width: 99%;
   height: 99%;
+}
+
+.header-one {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-one img {
+  width: 40px;
+  height: 60px;
 }
 /*# sourceMappingURL=home.css.map */
