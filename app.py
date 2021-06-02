@@ -24,8 +24,9 @@ def show_options():
 def show_maps():
     crime=request.form.get("crime")
     year=request.form.get("year")
-    if(crime=="rape" and year=="2017"):
-        return render_template("folium/karnataka.html")    
+    file_name="folium/"+crime+"/"+crime+"_"+year+".html"
+    return render_template(file_name)
+    
 
 @app.route("/showform",methods=["POST"])
 def show_form():
